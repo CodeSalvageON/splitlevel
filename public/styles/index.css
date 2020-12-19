@@ -1,0 +1,20 @@
+div {
+  transition: scale(1) width ease-in-out 2s;
+}
+
+.color-white {
+  color: white;
+}
+
+#split-level-house {
+  transition: background-image filter ease-in-out 5s;
+  -webkit-transition : background-image -webkit-filter 5s ease-in-out;
+}
+
+#split-level-house:hover {
+  cursor: pointer;
+}
+
+#residents-online {
+  color: greenyellow;
+}

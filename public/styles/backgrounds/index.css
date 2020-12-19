@@ -1,0 +1,65 @@
+#title-screen {
+  width: 800px;
+  height: 600px;
+  background-size: 4000px;
+}
+
+#enterance {
+  width: 800px;
+  height: 600px;
+  background-size: 2600px;
+}
+
+#info {
+  width: 600px;
+  height: 800px;
+  background-size: cover;
+}
+
+#basement {
+  width: 800px;
+  height: 600px;
+  background-size: 2300px;
+}
+
+#second-floor {
+  width: 800px;
+  height: 600px;
+  background-size: 2500px;
+}
+
+#library {
+  width: 800px;
+  height: 600px;
+  background-size: 2500px;
+}
+
+#library-info {
+  width: 600px;
+  height: 800px;
+  background-size: cover;
+}
+
+#yard {
+  width: 800px;
+  height: 600px;
+  background-size: 2300px;
+}
+
+#yard-info {
+  width: 600px;
+  height: 800px;
+  background-size: cover;
+}
+
+#room1 {
+  width: 800px;
+  height: 600px;
+  background-size: 2300px;
+}
+
+#room1-info {
+  width: 600px;
+  height: 800px;
+  background-size: cover;
+}
