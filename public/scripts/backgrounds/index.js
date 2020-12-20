@@ -9,6 +9,7 @@ const el_8 = document.querySelector("#yard");
 const el_9 = document.querySelector("#yard-info");
 const el_10 = document.querySelector("#room1");
 const el_11 = document.querySelector("#room1-info");
+const el_12 = document.querySelector("#room2");
 
 el_1.addEventListener("mousemove", function (event) {
   el_1.style.backgroundPositionX = - event.offsetX * 1.8 + "px";
@@ -43,6 +44,11 @@ el_8.addEventListener("mousemove", function (event) {
 el_10.addEventListener("mousemove", function (event) {
   el_10.style.backgroundPositionX = - event.offsetX * 1.8 + "px";
   el_10.style.backgroundPositionY = - event.offsetY + 80 + "px";
+});
+
+el_12.addEventListener("mousemove", function (event) {
+  el_12.style.backgroundPositionX = - event.offsetX * 1.8 + "px";
+  el_12.style.backgroundPositionY = - event.offsetY + 80 + "px";
 });
 
 el_1.addEventListener("touchmove", function (event) {

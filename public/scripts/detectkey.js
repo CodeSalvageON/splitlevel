@@ -12,6 +12,7 @@ function hideAll () {
   $("#yard-info").hide();
   $("#room1").hide();
   $("#room1-info").hide();
+  $("#room2").hide();
 }
 
 $(this).keypress(function (event) {
@@ -320,6 +321,21 @@ $(this).keypress(function (event) {
 
     else if (event.keyCode === 121) {
       console.log("Pressed Y");
+
+      $("#second-floor").fadeOut(2000);
+      $("#message-box").fadeOut(2000);
+
+      setTimeout(function () {
+        hideAll();
+
+        $("#room2").fadeIn(2000);
+        $("#message-box").fadeIn(2000);
+
+        message_box_typewriter.typeString("").deleteAll();
+        message_box_typewriter.typeString("Press X to go to sleep. Press Y to go back to the second floor.").start();
+      }, 2000);
+
+      screen = 12;
     }
 
     else if (event.keyCode === 122) {
@@ -386,5 +402,9 @@ $(this).keypress(function (event) {
 
       screen = 10;
     }
+  }
+
+  else if (screen === 12) {
+    
   }
 });

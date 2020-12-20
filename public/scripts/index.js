@@ -11,6 +11,7 @@ const yard = document.querySelector("#yard");
 const yard_info = document.querySelector("#yard-info");
 const room_1 = document.querySelector("#room1");
 const room_1_info = document.querySelector("#room1-info");
+const room_2 = document.querySelector("#room2");
 
 let onTitleScreen = true;
 
@@ -31,6 +32,7 @@ $("#yard").hide();
 $("#yard-info").hide();
 $("#room1").hide();
 $("#room1-info").hide();
+$("#room2").hide();
 
 $("#phone-modal").fadeIn(2000);
 
@@ -44,6 +46,7 @@ yard.style.backgroundImage = "url('https://media.discordapp.net/attachments/7720
 yard_info.style.backgroundImage = "url('https://media.discordapp.net/attachments/772064957793435678/786997195084791858/b3CjtL.png?width=484&height=632')";
 room_1.style.backgroundImage = "url('https://media.discordapp.net/attachments/772064957793435678/789654962446663690/Screen_Shot_2020-12-18_at_7.46.30_PM.png')";
 room_1_info.style.backgroundImage = "url('https://media.discordapp.net/attachments/772064957793435678/786997195084791858/b3CjtL.png?width=484&height=632')";
+room_2.style.backgroundImage = "url('https://media.discordapp.net/attachments/772064957793435678/790206433164656710/unknown.png?width=841&height=632')";
 
 function isDay() {
   const hours = (new Date()).getHours();

@@ -63,3 +63,9 @@
   height: 800px;
   background-size: cover;
 }
+
+#room2 {
+  width: 800px;
+  height: 600px;
+  background-size: 2300px;
+}
