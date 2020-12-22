@@ -13,6 +13,7 @@ function hideAll () {
   $("#room1").hide();
   $("#room1-info").hide();
   $("#room2").hide();
+  $("#living-room").hide();
 }
 
 $(this).keypress(function (event) {
@@ -34,8 +35,6 @@ $(this).keypress(function (event) {
         document.getElementById("paper-sound").play();
 
         $("#enterance").hide();
-
-        hideAll();
 
         message_box_typewriter.typeString("").deleteAll();
         message_box_typewriter.typeString("Read the letter.<br/>Press X to return to the house.").start();
@@ -67,10 +66,40 @@ $(this).keypress(function (event) {
   else if (screen === 3) {
     if (event.keyCode === 119) {
       console.log("Pressed W");
+
+      $("#enterance").fadeOut(2000);
+      $("#message-box").fadeOut(2000);
+
+      setTimeout(function () {
+        hideAll();
+
+        $("#title-screen").fadeIn(2000);
+        $("#message-box").fadeIn(2000);
+        
+        message_box_typewriter.typeString("").deleteAll();
+        message_box_typewriter.typeString("Click anywhere on the house to enter.<br/>Press X to read the letter.").start();
+      }, 2000);
+
+      screen = 1;
     }
 
     else if (event.keyCode === 97) {
       console.log("Pressed A");
+
+      $("#enterance").fadeOut(2000);
+      $("#message-box").fadeOut(2000);
+
+      setTimeout(function () {
+        hideAll();
+
+        $("#living-room").fadeIn(2000);
+        $("#message-box").fadeIn(2000);
+
+        message_box_typewriter.typeString("").deleteAll();
+        message_box_typewriter.typeString("Press X to go back to the enterance.").start();
+      }, 2000);
+
+      screen = 14;
     }
 
     else if (event.keyCode === 115) {
@@ -340,6 +369,21 @@ $(this).keypress(function (event) {
 
     else if (event.keyCode === 122) {
       console.log("Pressed Z");
+
+      $("#second-floor").fadeOut(2000);
+      $("#message-box").fadeOut(2000);
+
+      setTimeout(function () {
+        hideAll();
+
+        $("#enterance").fadeIn(2000);
+        $("#message-box").fadeIn(2000);
+
+        message_box_typewriter.typeString("").deleteAll();
+        message_box_typewriter.typeString("Use WASD keys to move around.<br/>Press X to visit the basement level.").start();
+      }, 2000);
+
+      screen = 3;
     }
   }
 
@@ -405,6 +449,70 @@ $(this).keypress(function (event) {
   }
 
   else if (screen === 12) {
+    if (event.keyCode === 120) {
+      console.log("Pressed X");
+
+      $("#room2").fadeOut(2000);
+
+      message_box_typewriter.typeString("").deleteAll();
+      message_box_typewriter.typeString("Press X to wake up.").start();
+
+      screen = 13;
+    }
+
+    else if (event.keyCode === 121) {
+      console.log("Pressed Y");
+
+      $("#room2").fadeOut(2000);
+      $("#message-box").fadeOut(2000);
+
+      setTimeout(function () {
+        hideAll();
+
+        $("#second-floor").fadeIn(2000);
+        $("#message-box").fadeIn(2000);
+
+        message_box_typewriter.typeString("").deleteAll();
+        message_box_typewriter.typeString("Press X and Y to access the two rooms.<br/>Press Z to go back downstairs.").start();
+      }, 2000);
+
+      screen = 5;
+    }
+  }
+
+  else if (screen === 13) {
+    if (event.keyCode === 120) {
+      console.log("Pressed X");
+
+      message_box_typewriter.typeString("").deleteAll();
+      message_box_typewriter.typeString("Press X to go to sleep. Press Y to go back to the second floor.").start();
+
+      $("#room2").fadeIn(2000);
+
+      screen = 12;
+    }
+  }
+
+  else if (screen === 14) {
+    if (event.keyCode === 120) {
+      console.log("Pressed X");
+
+      $("#living-room").fadeOut(2000);
+      $("#message-box").fadeOut(2000);
+
+      setTimeout(function () {
+        hideAll();
     
+        $("#enterance").fadeIn(2000);
+        $("#message-box").fadeIn(2000);
+
+        $("#info").hide();
+    
+       message_box_typewriter.typeString("").deleteAll();
+       message_box_typewriter.typeString("Use WASD keys to move around.<br/>Press X to visit the basement level.").start();
+      }, 2000);
+
+      screen = 3;
+    }
   }
 });
