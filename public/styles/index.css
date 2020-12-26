@@ -15,6 +15,13 @@ div {
   background-image: url('https://media.discordapp.net/attachments/759173234565316618/791289039893561364/iOS-stock-9-for-iPhone-X.png?width=292&height=632');
 }
 
+.server-list {
+  padding: 8px;
+  border: hidden;
+  border-radius: 8px;
+  background-color: beige;
+}
+
 #split-level-house {
   transition: background-image filter ease-in-out 5s;
   -webkit-transition : background-image -webkit-filter 5s ease-in-out;
@@ -25,5 +32,17 @@ div {
 }
 
 #residents-online {
+  color: greenyellow;
+}
+
+#server-listing {
+  color: greenyellow;
+}
+
+#enter-ip {
+  color: greenyellow;
+}
+
+#public-servers {
   color: greenyellow;
 }
