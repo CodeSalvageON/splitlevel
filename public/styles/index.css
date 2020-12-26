@@ -6,6 +6,15 @@ div {
   color: white;
 }
 
+.phone {
+  width: 500px;
+  height: 700px;
+  color: white;
+  border: 30px solid white;
+  background-size: cover;
+  background-image: url('https://media.discordapp.net/attachments/759173234565316618/791289039893561364/iOS-stock-9-for-iPhone-X.png?width=292&height=632');
+}
+
 #split-level-house {
   transition: background-image filter ease-in-out 5s;
   -webkit-transition : background-image -webkit-filter 5s ease-in-out;

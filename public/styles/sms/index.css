@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+  left: 0px;
+  margin: 0;
+  bottom: 0;
+  width: 100vw;
+  padding: 0.5px;
+  position: fixed;
+  background-color: #e8e3e3;
+}
+
+.sms {
+  width: 200px;
+  padding: 8px;
+  border: hidden;
+  position: relative;
+  border-radius: 8px;
+  background-color: powderblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.left {
+  left: 0px;
+  position: relative;
+}
+
+.right {
+  right: 0px;
+  position: relative;
+}
+
+.text-input {
+  padding: 2px;
+  border-radius: 8px;
+  background-color: white;
+  border: 1px solid lightgray;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-btn {
+  border: hidden;
+  background: none;
+}

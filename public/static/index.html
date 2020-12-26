@@ -34,8 +34,6 @@
         <div class="center">
           <img src="https://media.discordapp.net/attachments/772064957793435678/788845002200842240/sms-icon-iphone-10.png" width="50" height="50"/><img src="https://media.discordapp.net/attachments/772064957793435678/788845356514279434/github-icon-1.png" width="50" height="50"/><img src="https://media.discordapp.net/attachments/772064957793435678/788845541009391676/app-icons-discord.png?width=632&height=632" width="50" height="50"/><img src="https://media.discordapp.net/attachments/772064957793435678/788925494384918528/340.png" width="50" height="50"/>
         </div>
-        <br/>
-        <h3 class="center">Press M to open your journal at any time.</h3>
       </div>
     </div>
 
@@ -102,6 +100,24 @@
 
     <div id="living-room" class="center rounded magic-ball">
     </div>
+
+    <div id="iphone-modal" class="modal">
+      <div class="modal-content phone">
+        <span class="close" id="close-iphone-modal">&times;</span>
+        <div class="center">
+           <img src="https://media.discordapp.net/attachments/772064957793435678/788845002200842240/sms-icon-iphone-10.png" width="150" height="150" class="zoom" id="sms-icon"/><img src="https://media.discordapp.net/attachments/772064957793435678/788845356514279434/github-icon-1.png" width="150" height="150" class="zoom" id="github-icon"/><img src="https://media.discordapp.net/attachments/772064957793435678/788845541009391676/app-icons-discord.png?width=632&height=632" width="150" height="150" class="zoom" id="discord-icon"/>
+           <br/>
+        </div>
+        <pre>  <img src="https://media.discordapp.net/attachments/772064957793435678/788925494384918528/340.png" width="150" height="150" class="zoom" id="youtube-icon"/></pre>
+      </div>
+    </div>
+
+    <div id="sms-modal" class="modal">
+      <div class="modal-content phone">
+        <span class="close" id="close-sms-modal">&times;</span> 
+        <iframe src="/static/sms/index.html" width="500" height="600" frameBorder="0"></iframe>
+      </div>
+    </div>
     
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -112,6 +128,8 @@
     <script src="/scripts/detectkey.js"></script>
     <script src="/scripts/socket.js"></script>
     <script src="/scripts/update_online_residents.js"></script>
+    <script src="/scripts/mobile.js"></script>
+    <script src="/scripts/phone.js"></script> 
 
     <audio src="/sounds/title-screen/CARBY2.mp3" id="car-passing-by"><h1>Your Browser Does not support the audio tag!</h1></audio>
     <audio src="/sounds/paper.mp3" id="paper-sound"></audio>

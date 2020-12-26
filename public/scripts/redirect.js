@@ -1,0 +1,1 @@
+location.href = "https://splitlevel.codesalvageon.repl.co";

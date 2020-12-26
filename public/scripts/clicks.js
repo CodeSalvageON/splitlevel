@@ -43,3 +43,11 @@ $("#split-level-house").click(function () {
 $("#close-phone-modal").click(function () {
   $("#phone-modal").fadeOut(2000);
 });
+
+$("#open-servers").click(function () {
+  window.open("/client");
+});
+
+$("#close-iphone-modal").click(function () {
+  $("#iphone-modal").fadeOut(2000);
+});
