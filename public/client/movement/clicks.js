@@ -51,3 +51,7 @@ $("#open-servers").click(function () {
 $("#close-iphone-modal").click(function () {
   $("#iphone-modal").fadeOut(2000);
 });
+
+$("#create-server").click(function () {
+  window.open("https://github.com/CodeSalvageON/splitlevel/blob/master/servers.md");
+});

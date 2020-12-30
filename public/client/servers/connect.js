@@ -61,6 +61,9 @@ $("#enter-ip").submit(function () {
 
     document.getElementById("music").src = "https://www.youtube.com/embed/videoseries?controls=0&amp;list=" + music_playlist.replace("https://www.youtube.com/playlist?list=", "");
 
+    document.getElementById("custom_styles").innerHTML = custom_styles;
+    document.getElementById("custom_scripts").innerHTML = custom_scripts;
+
     setTimeout(function () {
       $("#message-box").fadeIn(2000);
       $("#title-screen").fadeIn(2000);
