@@ -16,10 +16,15 @@ div {
 }
 
 .server-list {
+  width: 500px;
   padding: 8px;
   border: hidden;
   border-radius: 8px;
   background-color: beige;
+}
+
+.error {
+  color: red;
 }
 
 #split-level-house {

@@ -13,19 +13,107 @@
     <link href="/styles/backgrounds/index.css" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <div id="custom_styles">
+    </div>
   </head>
   <body class="black jetbrains">
-    <div id="server-listing" class="center">
-      <h1>NETWORK NEIGHBORHOOD</h1>
-      <pre><h3>Server Listings, click <a class="false-link" id="create-server">here</a> to create one.</pre>
+    <div id="pre-client">
+      <div id="server-listing" class="center">
+        <h1>NETWORK NEIGHBORHOOD</h1>
+        <pre class="error">Public servers are unmoderated and created by individual users. Connect to them at your own risk!</pre>
+        <pre><h3>Server Listings, click <a class="false-link" id="create-server">here</a> to create one.</pre>
+      </div>
+      <hr/>
+      <pre class="error center" id="connection-error"></pre>
+      <form id="enter-ip" class="center">
+        <h3>Enter a server IP here: <input type="text" id="server-ip" class="text-input" required/><button class="button">Connect</button></h3>
+      </form>
+      <br/>
+      <div id="public-servers" class="center">
+        <h2>Public Servers</h2>
+      </div>
+      <center>
+        <div id="servers-div">
+        </div>
+      </center>
     </div>
-    <hr/>
-    <form id="enter-ip" class="center">
-      <h3>Enter a server IP here: <input type="text" id="server-ip" class="text-input" required/><button class="button">Connect</button></h3>
-    </form>
-    <br/>
-    <div id="public-servers" class="center">
-      <h2>Public Servers</h2>
+
+    <h3 class="center jetbrains skyblue paragraph rounded boxed" id="message-box">Click anywhere on the house to enter.<br/><p class="false-link" id="what-is-this-place">What is this place?</p></h3>
+    <br/> 
+    <div id="title-screen" class="center rounded magic-ball">
+      <img src="https://media.discordapp.net/attachments/772064957793435678/786017264284860436/image-removebg-preview.png" id="split-level-house" width="800" height="600" class="rounded"/>
+    </div>
+
+    <div class="modal" id="phone-modal">
+      <div class="modal-content" class="center">
+        <span class="close" id="close-phone-modal">&times;</span>
+        <h3 class="center">Press Q to open your smart phone at any time.</h3>
+        <div class="center">
+          <img src="https://media.discordapp.net/attachments/772064957793435678/788845002200842240/sms-icon-iphone-10.png" width="50" height="50"/><img src="https://media.discordapp.net/attachments/772064957793435678/788925494384918528/340.png" width="50" height="50"/>
+        </div>
+      </div>
+    </div>
+
+    <div id="enterance" class="center rounded magic-ball">
+    </div>
+
+    <div id="basement" class="center rounded magic-ball">
+    </div>
+
+    <div id="second-floor" class="center rounded magic-ball">
+    </div>
+
+    <div id="library" class="center rounded magic-ball">
+    </div>
+
+    <div id="yard" class="center rounded magic-ball">
+    </div>
+
+    <div id="room1" class="center rounded magic-ball">
+    </div>
+
+    <div id="room2" class="center rounded magic-ball">
+    </div>
+
+    <div id="living-room" class="center rounded magic-ball">
+    </div>
+
+    <div id="iphone-modal" class="modal">
+      <div class="modal-content phone">
+        <span class="close" id="close-iphone-modal">&times;</span>
+        <div class="center">
+           <img src="https://media.discordapp.net/attachments/772064957793435678/788845002200842240/sms-icon-iphone-10.png" width="150" height="150" class="zoom" id="sms-icon"/><img src="https://media.discordapp.net/attachments/772064957793435678/788925494384918528/340.png" width="150" height="150" class="zoom" id="youtube-icon"/>
+        </div>
+      </div>
+    </div>
+
+    <div id="sms-modal" class="modal">
+      <div class="modal-content phone">
+        <span class="close" id="close-sms-modal">&times;</span> 
+        <iframe src="/static/sms/index.html" width="500" height="600" frameBorder="0"></iframe>
+      </div>
+    </div>
+
+    <div id="yt-modal" class="modal">
+      <div class="modal-content phone">
+        <span class="close" id="close-yt-modal">&times;</span> 
+        <iframe width="500" height="600" src="https://www.youtube.com/embed/videoseries?controls=0&amp;list=PL1KJ0I7lUj0SyC-KybuUDyCCNUtiAdc8K" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="music"></iframe>
+      </div>
+    </div>
+    
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
+    <script src="/client/servers/get-servers.js"></script>
+    <script src="/client/servers/connect.js"></script>
+    <script src="/client/movement/index.js"></script>
+    <script src="/client/movement/clicks.js"></script>
+    <script src="/client/movement/background.js"></script>
+    <script src="/client/movement/detectkey.js"></script>
+    <script src="/client/extras/phone.js"></script>
+
+    <div id="custom_scripts">
     </div>
   </body>
 </html>

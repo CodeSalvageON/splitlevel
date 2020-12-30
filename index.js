@@ -1,4 +1,7 @@
 const fs = require('fs');
+const https = require('https');
+const axios = require('axios');
+var request = require("request");
 const express = require('express');
 
 var app = require('express')();
@@ -15,6 +18,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 let residents_online = 0;
 let tab_management = "";
+
+let public_servers = "";
 
 const {
 	type,
@@ -86,6 +91,10 @@ app.get('/get-sms', async function (req, res) {
   res.send(doc.data().log);
 });
 
+app.get('/public-servers', function (req, res) {
+  res.send(public_servers);
+});
+
 app.post('/sms', async function (req, res) {
   const message = req.body.txt;
   const cleaned_msg = sanitizer.escape(message);
@@ -100,6 +109,42 @@ app.post('/sms', async function (req, res) {
   }
 
   smsRef.set(append_data);
+});
+
+app.post('/public', function (req, res) {
+  const server_address = sanitizer.escape(req.body.serv_add);
+  const server_custom_text = sanitizer.escape(req.body.custom);
+
+  let server_listing_box = `<div class="server-list">
+    <h3>` + server_address + `</h3>
+    <hr/>
+    <h4>` + server_custom_text + `</h4>
+  </div><br/>`;
+
+  if (public_servers.includes(server_listing_box)) {
+    console.log("EXISTS");
+
+    res.send("exists");
+  }
+
+  else {
+    public_servers = public_servers + server_listing_box;
+
+    res.send("success");
+  }
+});
+
+app.post('/connect', function (req, res) {
+  const url_ip = req.body.thing;
+  const salvation = url_ip.replace("https://", "");
+
+  request({
+    uri: url_ip + "/json",
+  }, function(error, response, body) {
+    console.log(body);
+
+    res.send(body);
+  });
 });
 
 app.use(function(req, res) {

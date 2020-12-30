@@ -5,6 +5,8 @@ $("#send").submit(function () {
     txt : document.getElementById("msg").value
   }
 
+  document.getElementById("msg").value = "";
+
   fetch ('/sms', {
     method : "POST",
     headers : {
